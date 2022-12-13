@@ -1,0 +1,30 @@
+{
+  "name": "boot-profiler",
+  "version": "0.0.0",
+  "description": "Node library for running project within configs",
+  "author": {
+    "name": "Eduard Lik",
+    "email": "feft99@gmail.com"
+  },
+  "keywords": [
+    "node",
+    "boot",
+    "env",
+    "config"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "bin": {
+    "boot-profiler": "lib/command.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feftio/boot-profiler.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "commander": "^9.4.1",
+    "eslint": "^8.23.1",
+    "eslint-config-standard": "^17.0.0"
+  }
+}
