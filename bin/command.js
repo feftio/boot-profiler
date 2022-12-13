@@ -1,7 +1,8 @@
+#!/usr/bin/env node
 const program = require('commander')
-const { mergeParsedProfile } = require('./profile')
-const { mergeParsedOptions, validateOptions, loadOptions, pack } = require('./options')
-const { requireConfig } = require('./utils/config')
+const { mergeParsedProfile } = require('../lib/profile')
+const { mergeParsedOptions, validateOptions, loadOptions, pack } = require('../lib/options')
+const { requireConfig } = require('../lib/utils/config')
 const {
   options: definedOptions,
   profiles: definedProfiles,
