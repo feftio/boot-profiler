@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
-import { unpack } from '../boot'
+import { unpack } from '../lib'
 
 export default defineConfig(params => {
   // process.env = { ...process.env, ...unpack(loadEnv(params.mode, process.cwd(), 'ENV_')) }

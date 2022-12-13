@@ -1,6 +1,6 @@
 {
   "name": "boot-profiler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node library for running project within configs",
   "author": {
     "name": "Eduard Lik",
@@ -12,8 +12,7 @@
     "env",
     "config"
   ],
-  "type": "module",
-  "main": "./lib/index.js",
+
   "bin": {
     "boot-profiler": "lib/command.js"
   },
