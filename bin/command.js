@@ -1,8 +1,18 @@
 #!/usr/bin/env node
 const program = require('commander')
-const { mergeParsedProfile } = require('../lib/profile')
-const { mergeParsedOptions, validateOptions, loadOptions, pack } = require('../lib/options')
-const { requireConfig } = require('../lib/utils/config')
+const {
+  mergeParsedProfile
+} = require('../lib/profile')
+const {
+  mergeParsedOptions,
+  validateOptions,
+  loadOptions,
+  pack
+} = require('../lib/options')
+const error = require('../lib/utils/error')
+const {
+  requireConfig
+} = require('../lib/utils/config')
 const {
   options: definedOptions,
   profiles: definedProfiles,
@@ -25,4 +35,8 @@ loadOptions(program, definedOptions)
 
 program.parse()
 
-definedRun(options)
+try {
+  definedRun(options)
+} catch (e) {
+  error('failed "run" function execution', e)
+}
