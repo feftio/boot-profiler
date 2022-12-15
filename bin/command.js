@@ -28,7 +28,6 @@ program
     mergeParsedProfile(options, definedProfiles, parsedProfile)
     mergeParsedOptions(options, definedOptions, parsedOptions)
     validateOptions(options, definedOptions)
-    pack(options)
   })
 
 loadOptions(program, definedOptions)
@@ -36,7 +35,7 @@ loadOptions(program, definedOptions)
 program.parse()
 
 try {
-  definedRun(options)
+  definedRun(pack(options), options)
 } catch (e) {
   error('failed "run" function execution', e)
 }

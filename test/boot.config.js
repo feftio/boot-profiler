@@ -2,8 +2,8 @@ const exec = require('child_process').exec
 const casts = require('../lib/utils/casts')
 
 module.exports = {
-  run: (options) => {
-    const vm = (JSON.parse(options.ENV_VITE_MODE) === 'development') ? 'serve' : 'build'
+  run: (options, { ENV_VITE_MODE }) => {
+    const vm = (ENV_VITE_MODE === 'development') ? 'serve' : 'build'
     const command = exec(`npx vite ${vm}`, {
       env: {
         ...process.env,
