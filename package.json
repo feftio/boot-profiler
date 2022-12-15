@@ -1,6 +1,6 @@
 {
   "name": "boot-profiler",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Node library for running project within configs",
   "author": {
     "name": "Eduard Lik",
