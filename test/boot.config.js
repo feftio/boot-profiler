@@ -2,17 +2,15 @@ const exec = require('child_process').exec
 const casts = require('../lib/utils/casts')
 
 module.exports = {
-  run: (options, { ENV_VITE_MODE }) => {
-    const vm = (ENV_VITE_MODE === 'development') ? 'serve' : 'build'
-    const command = exec(`npx vite ${vm}`, {
-      env: {
-        ...process.env,
-        ...options
-      }
-    })
-    command.stdout.on('data', data => console.log(data.toString()))
-    command.stderr.on('data', data => console.error(data.toString()))
-    command.on('exit', code => console.log(code.toString()))
+  settings: {
+    env: {
+      include: true,
+      pack: true
+    }
+  },
+  run: (packedOptions, unpackedOptions) => {
+    console.dir(packedOptions)
+    console.dir(unpackedOptions)
   },
   options: {
     ENV_VITE_MODE: {
